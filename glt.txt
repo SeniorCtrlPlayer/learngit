@@ -13,3 +13,6 @@
   -m参数后面跟上提交说明 例如:git commit -m "this is a example"
 6.git status查看当前仓库状态
 7.git diff <file> 查看file的修改记录
+8.git log 显示最近到最远的提交日志
+  将显示每次提交的版本号，作者，日期，提升信息
+  --pretty=oneline仅显示版本号 和 提示信息
