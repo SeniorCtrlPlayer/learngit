@@ -1,0 +1,10 @@
+1.warning: LF will be replaced by CRLF in <file>
+  Uinx/Linux采用换行符LF表示下一行（LF：LineFeed，中文意思是换行）；
+  Dos和Windows采用回车+换行CRLF表示下一行（CRLF：CarriageReturn LineFeed，中文意思是回车换行）；
+  Mac OS采用回车CR表示下一行（CR：CarriageReturn，中文意思是回车）。
+
+  git config core.autocrlf
+  显示git中采取哪种对待换行符的方式
+  -ture -false -input
+
+  git config --global core.autocrlf false
