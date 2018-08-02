@@ -1,0 +1,14 @@
+1.安装完后初始化git
+  git config --global usr.name "自定义名称"
+  git config --global usr.email "email@example.com"
+  --global参数表示机器上的所有git仓库都会使用这个配置，即全局配置
+2.mkdir 创建文件夹
+  pwd 查看当前路径
+3.git init 把当前目录变成Git可以管理的仓库
+  .git目录是隐藏的，用ls -ah命令可以看到
+4.git add <file>
+  将file添加到git队列
+5.git commit
+  将git队列的文件提交到仓库
+  -m参数后面跟上提交说明 例如:git commit -m "this is a example"
+6.git status查看当前仓库状态
