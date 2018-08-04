@@ -28,5 +28,8 @@
   HEAD^ 回退到上个版本
   HEAD^^ 回退到上上个版本，依此类推
   HEAD~100 往上100个版本
+  
+  跳转到任意版本
+  git reset --hard <commit id>
 
 10.git reflog 可以查看到每一次的命令，包括git log中不包含的已回退版本
