@@ -48,3 +48,7 @@
   git reset --hard <commit id>
 
 10.git reflog 可以查看到每一次的命令，包括git log中不包含的已回退版本
+
+11.git checkout -- <file>
+	将file在工作区的修改全部撤销
+
