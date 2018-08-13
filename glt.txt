@@ -19,7 +19,21 @@
 6.git status查看当前仓库状态
 
 7.git diff <file> 比较工作目录中当前文件和stage之间的差异,新修改文件未add至	stage中
-  --cached参数，比较stage和分支(默认master分支)里的内容差异
+
+  git diff --cached <file>其中--cached是对file的修饰，指明file为cache/stage
+  中的file,此时默认的对比版本为HEAD,即是master分支
+  以下命令效果相同:
+  git diff HEAD --cached <file>
+  git diff --cached <file>
+
+  git diff HEAD -- <file> 比较版本库和工作区里的文件差别,HEAD指的是master版
+  本库, file指的是工作区里的文件'--'可省略
+  以下命令效果相同:
+  git diff <file>
+  git diff -- <file>
+
+  git diff head <file>
+  git diff head -- <file>
 
 8.git log 显示最近到最远的提交日志
   将显示每次提交的版本号，作者，日期，提升信息
