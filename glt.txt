@@ -47,11 +47,16 @@
   跳转到任意版本
   git reset --hard <commit id>
   
-  撤销暂存区某文件的修改,还原成master分支版本
+  撤销暂存区某文件的修改,还原成master分支版本,只能撤销修改不能撤销删除,若暂
+  存区的文件被rm掉，则此命令无效
   git reset head <file>
 
 10.git reflog 可以查看到每一次的命令，包括git log中不包含的已回退版本
 
 11.git checkout -- <file>
+  1.若暂存区有file
 	将工作区的file还原为暂存区的file
+  2.若暂存区无file
+  	将版本库里的file还原至工作区
 
+12.rm <file>会同时删除工作区和暂存区的file

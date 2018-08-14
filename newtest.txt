@@ -1,2 +1,0 @@
-this is a test file 
-to test how the rm command work in git
