@@ -60,3 +60,7 @@
   	将版本库里的file还原至工作区
 
 12.rm <file>会同时删除工作区和暂存区的file
+
+13.git rm <file>
+	可以直接删除版本库里的file,无法再git checkout -- file
+   git add <file>
