@@ -46,6 +46,9 @@
   
   跳转到任意版本
   git reset --hard <commit id>
+  
+  撤销暂存区某文件的修改,还原成master分支版本
+  git reset head <file>
 
 10.git reflog 可以查看到每一次的命令，包括git log中不包含的已回退版本
 
