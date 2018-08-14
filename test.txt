@@ -3,4 +3,4 @@ Git is free software distributed under the GPL.
 The first change
 The second chagne
 git reset head <file>测试
-测试标记
+测试标记1
