@@ -1,0 +1,39 @@
+a=xlsread('new90.xlsx');
+n=a(:,2);
+sumtemp=sum(a(:,1));
+team=[];
+x=0;
+y=0;
+for t=1:29
+    m=n(n>0);
+    k=combntns(m,3);
+    for i=1:length(k)
+        sum1=a(k(i,1))+a(k(i,2))+a(k(i,3));
+        sum2=sumtemp-sum1;
+        avg1=sum1/3;
+        avg2=sum2/(length(m)-3);
+        k(i,4)=avg1;
+        k(i,5)=avg2;
+        k(i,6)=abs(avg1-avg2);
+    end
+    k=sortrows(k,6);
+    k=k(:,1:3);
+    for j=1:length(k)
+        if(sum(a(k(j,:),3))==2&&x<25)
+            if(a(k(j,1),4)~=a(k(j,2),4)||a(k(j,1),4)~=a(k(j,3),4))
+                x=x+1;
+                break;
+            end
+        elseif(sum(a(k(j,:),3))==1&&y<5)
+            if(a(k(j,1),4)~=a(k(j,2),4)||a(k(j,1),4)~=a(k(j,3),4))
+                y=y+1;
+                break;
+            end
+        end
+    end
+    team=[k(j,:);team];
+    sumtemp=sumtemp-sum(a(team(1,:),1));%a(m(1,:),1)其中m(1,:)为某一次选出队伍的成员名次
+    n(team(1,:))=0;
+end
+m=n(n>0);
+team=[m';team]

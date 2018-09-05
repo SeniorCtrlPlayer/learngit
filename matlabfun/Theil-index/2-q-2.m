@@ -1,0 +1,16 @@
+a=xlsread('i.xlsx');
+a(1,:)=[];%各省市城镇人均可支配收入
+b=xlsread('i.xlsx','sheet2');
+b(1,:)=[];%各省市农村人均可支配收入
+c=xlsread('p.xlsx');%各省市城镇常住人口
+d=xlsread('p.xlsx','sheet2');%各省市农村常住人口
+a1=a(1,2:4);
+b1=b(1,2:4);
+c1=c(1,2:4);
+d1=d(1,2:4);
+k1=c./(c+d);
+T1=k1.*log(k1.*(a+b)./a);
+k2=d./(c+d);
+T2=k2.*log(k2.*(a+b)./b);
+T=T1+T2;
+T(:,1)=a(:,1);

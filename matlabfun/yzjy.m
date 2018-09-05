@@ -1,0 +1,10 @@
+%一致性检验
+b=ans
+d=a*b
+e=5*b
+f=d./e
+MAX=%求和
+n=rank(a)
+CI=(MAX-n)/(n-1)
+RI=%对应矩阵的秩的RI值
+CR=CI/RI
